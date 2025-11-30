@@ -13,10 +13,12 @@ void main() async {
     ),
   );
   
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,14 +26,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ECommerceDemo(),
+      home: const ECommerceDemo(),
     );
   }
 }
 
 class ECommerceDemo extends StatefulWidget {
+  const ECommerceDemo({super.key});
+
   @override
-  _ECommerceDemoState createState() => _ECommerceDemoState();
+  State<ECommerceDemo> createState() => _ECommerceDemoState();
 }
 
 class _ECommerceDemoState extends State<ECommerceDemo> {
